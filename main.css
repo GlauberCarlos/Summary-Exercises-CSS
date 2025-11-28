@@ -138,10 +138,12 @@ header a:hover {
 
 .study-card {
    max-width: 300px;   
+   position: relative;
 }
 
 .study-card img {
    max-height: 100px;
+   
 }
 
 .study-card-title {
@@ -149,7 +151,7 @@ header a:hover {
    color: #b215b2;
    font-size: 20px;
    font-weight: 600;
-   margin: 5px 0 20px;
+   margin: 5px 0 20px; 
 }
 
 .study-card-txt {
@@ -158,6 +160,19 @@ header a:hover {
    font-size: 16px;
    font-weight: 600;
    width: 85%;
+   
+}
+
+.study-circle {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100px;
+   width: 100px;
+   transform: translate(100%, 0%);
+   z-index: -1;
+   background: #290729;
+   border-radius: 50px;
 }
 
 /* OUR ROBOTS  */
@@ -218,7 +233,25 @@ header a:hover {
 
 .how-it-works-card {
    max-width: 200px;
+   text-align: center;   
+   position: relative;
+   /* border: red 1px solid; */
+}
+
+.works-number {
+   margin: 0;
+   position: absolute;
    text-align: center;
+   align-content: center;
+   top: -10px;
+   left: 120px;
+   width: 30px;
+   height: 30px;
+   border-radius: 15px;
+   border: #ed76e3 1px solid;
+   background-color: #fff;
+   font-size: 12px;
+   z-index: 1;
 }
 
 .how-it-works-card img {
@@ -228,18 +261,17 @@ header a:hover {
    padding: 35px;
    margin-bottom: 5px;
    background: linear-gradient(to bottom,#5b015b, #f33091);
+   
+   /* border: red 1px solid; */
 }
 
-.how-it-works-card div {
-   box-sizing: border-box;
-   border: #e852db dotted 4px;
-   padding: 10px;
-}
-
-.study-card-txt {
+.how-works-txt {
    text-align: center;
    font-size: 16px;
    font-weight: 400;
+   box-sizing: border-box;
+   border: #e852db dotted 4px;
+   padding: 10px;
 }
 
 /* LEARNING  */
@@ -530,22 +562,17 @@ header a:hover {
    flex-direction: column;
    justify-content: baseline;
    align-items: center;
-   /* border: rgb(0, 102, 255) 1px solid; */
 }
 
-.form-message input {
+.form-message textarea {
    height: 100px;
    width: 500px;   
    margin: 10px 10px 0;
-   padding-left: 10px;
+   padding: 10px;
    border: 1px solid grey;
+   resize: none;
    border-radius: 3px;
-   position: relative;
-}
-
-.form-message input::placeholder {
-   position: absolute;
-   top: 8px;
+   font-family: inherit;
 }
 
 .send {
@@ -557,6 +584,12 @@ header a:hover {
    justify-content: center;
    align-items: center;
    background:  linear-gradient(to right,#ed76e3, #5b015b);
+   transition: scale 0.5s ease, color 0.5s ease;
+}
+
+.send:hover {
+   scale: 1.1;
+   color: #fff;
 }
 
 .form-block3 {
